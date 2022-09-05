@@ -1,0 +1,367 @@
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Navigation grid */
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  background-color: white;
+  background-image: url("https://cdn.glitch.com/ad1e5b0b-3657-4400-8b42-9ba57664f218%2Fnotes-bg-white.png?v=1625534284236");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font: 0.8125em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.rad {
+  border-radius: 0 500px 500px 0;
+}
+
+h1 {
+  color: black;
+  font-family: "Zen Tokyo Zoo", cursive;
+  letter-spacing: 0.1em;
+}
+h2 {
+  color: black;
+  font-family: "Zen Tokyo Zoo", cursive;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  margin-left: 60px;
+}
+/* header for error code Retry */
+h3 {
+  color: black;
+  text-align: center;
+}
+/* header for OK button */
+h4 {
+  color: blue;
+  font-size: 16px;
+  text-align: center;
+}
+.button1 {
+  cursor: pointer;
+  color: blue;
+  background: white;
+  border: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.1em;
+  text-align: center;
+  position: relative;
+  padding-left: 75px;
+}
+.button2 {
+  cursor: pointer;
+  position: relative;
+  padding-left: 90px;
+  color: blue;
+  background: white;
+  border: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.1em;
+}
+.center {
+  text-align: center;
+}
+/* add superscript styling */
+.sup {
+  color: yellow;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* card for notes sections */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 40px 20px 40px 20px;
+  margin: 20px auto;
+  border-radius: 10px 10px 10px 10px;
+  text-align: left;
+  background-color: white;
+  background-image: url("https://cdn.glitch.com/ad1e5b0b-3657-4400-8b42-9ba57664f218%2Fnotes-bg-black.png?v=1625534308760");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+/* for text messages */
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  background-image: url("https://cdn.glitch.com/ad1e5b0b-3657-4400-8b42-9ba57664f218%2Ftxt-msg.png?v=1625534903060");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px;
+  padding-top: 90px;
+  padding-bottom: 450px;
+  line-height: 0.8em;
+  margin: 20px auto;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* for phone error alerts */
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px 3px 15px 3px;
+  line-height: 1em;
+  margin: 0 auto;
+  width: 200px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+}
+.columnS {
+  float: left;
+  width: 250px;
+  padding: 0 6px;
+}
+.columnL {
+  float: left;
+  width: 35%;
+  padding: 0 6px;
+}
+.columnXl {
+  float: left;
+  width: 50%;
+  padding: 0 6px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .columnS {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .columnL {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .columnR {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/*popup code */
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555555;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -90px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* text message bubbles */
+
+.bubble {
+  background-image: linear-gradient(
+    bottom,
+    rgb(210, 244, 254) 25%,
+    rgb(149, 194, 253) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(210, 244, 254) 25%,
+    rgb(149, 194, 253) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(210, 244, 254) 25%,
+    rgb(149, 194, 253) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(210, 244, 254) 25%,
+    rgb(149, 194, 253) 100%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    rgb(210, 244, 254) 25%,
+    rgb(149, 194, 253) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.25, rgb(210, 244, 254)),
+    color-stop(1, rgb(149, 194, 253))
+  );
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  /* vendor rules */
+  border-radius: 20px;
+  /* vendor rules */
+  box-shadow: inset 0 5px 5px rgba(255, 255, 255, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+  /* vendor rules */
+  box-sizing: border-box;
+  clear: both;
+  float: left;
+  margin-bottom: 20px;
+  padding: 8px 30px;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  width: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.bubble:before,
+.bubble:after {
+  border-radius: 20px / 10px;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.bubble:before {
+  border: 10px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: -7px;
+  z-index: -2;
+}
+
+.bubble:after {
+  border: 8px solid transparent;
+  border-bottom-color: #d2f4fe;
+  bottom: 1px;
+  left: -5px;
+}
+
+.bubble--alt {
+  background-image: linear-gradient(
+    bottom,
+    rgb(172, 228, 75) 25%,
+    rgb(122, 205, 71) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(172, 228, 75) 25%,
+    rgb(122, 205, 71) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(172, 228, 75) 25%,
+    rgb(122, 205, 71) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(172, 228, 75) 25%,
+    rgb(122, 205, 71) 100%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    rgb(172, 228, 75) 25%,
+    rgb(122, 205, 71) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.25, rgb(172, 228, 75)),
+    color-stop(1, rgb(122, 205, 71))
+  );
+  float: right;
+}
+
+.bubble--alt:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px / 10px;
+  left: auto;
+  right: -7px;
+}
+
+.bubble--alt:after {
+  border-bottom-color: #ace44b;
+  border-radius: 20px / 10px;
+  left: auto;
+  right: -5px;
+}
+/* end of bubble code */
