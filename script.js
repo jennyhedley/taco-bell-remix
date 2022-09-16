@@ -26,8 +26,8 @@ function getRandomFromList(list) {
 }
 const sent1 = [
   "Your device is not connected.",
-  "Make sure '[—]' is turned on and in range.",
-  "Now discoverable as '[—]'.",
+  "Make sure '[Taco Bell]' is turned on and in range.",
+  "Now discoverable as '[Taco Bell]'.",
   "Connection unsuccessful.",
   "Your connection is unstable.",
   "Out of range.",
